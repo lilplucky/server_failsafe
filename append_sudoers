@@ -1,0 +1,7 @@
+#Append this lines to sudoers file if they are not already present
+www-data ALL=(ALL) NOPASSWD: /usr/bin/ssh
+www-data ALL=(ALL) NOPASSWD: /bin/systemctl start ssh.socket
+www-data ALL=(ALL) NOPASSWD: /bin/systemctl mask ssh.service
+www-data ALL=(ALL) NOPASSWD: /bin/systemctl unmask ssh.service
+www-data ALL=(ALL) NOPASSWD: /bin/systemctl mask ssh.socket
+www-data ALL=(ALL) NOPASSWD: /bin/systemctl unmask ssh.socket
